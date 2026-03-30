@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 48" width="560" height="48" role="img" aria-labelledby="heading-enter-lobby">
+  <title id="heading-enter-lobby">Enter the Lobby</title>
+  <text x="0" y="32" fill="#d0ab7f" font-size="30" font-weight="700" font-family="'SF Mono','Fira Code','Courier New',monospace">ENTER THE LOBBY</text>
+  <line x1="0" y1="40" x2="350" y2="40" stroke="#8a6a48" stroke-width="2" />
+</svg>

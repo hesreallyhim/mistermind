@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 126" width="980" height="126" role="img" aria-labelledby="cta-start-new-game">
+  <title id="cta-start-new-game">Start a New Game</title>
+  <defs>
+    <linearGradient id="cta-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#603621" />
+      <stop offset="100%" stop-color="#3f2416" />
+    </linearGradient>
+    <linearGradient id="cta-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c68644" />
+      <stop offset="50%" stop-color="#fae8c1" />
+      <stop offset="100%" stop-color="#b97835" />
+    </linearGradient>
+    <linearGradient id="cta-wing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8d4f2d" />
+      <stop offset="100%" stop-color="#693921" />
+    </linearGradient>
+  </defs>
+  <polygon points="24,52 110,26 110,100 24,120" fill="url(#cta-wing)" stroke="#b57545" stroke-width="3" />
+  <polygon points="956,52 870,26 870,100 956,120" fill="url(#cta-wing)" stroke="#b57545" stroke-width="3" />
+  <rect x="96" y="14" width="788" height="98" rx="20" fill="url(#cta-panel)" stroke="#b67f4f" stroke-width="4" />
+  <text x="490" y="72" text-anchor="middle" fill="url(#cta-gold)" font-size="52" font-weight="700" letter-spacing="2" font-family="'Cinzel','Copperplate','Times New Roman',serif">START A NEW GAME</text>
+</svg>

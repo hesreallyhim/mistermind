@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 190" width="1180" height="190" role="img" aria-labelledby="heading-hall-of-fame">
+  <title id="heading-hall-of-fame">Champions Hall of Fame</title>
+  <defs>
+    <linearGradient id="hof-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b321f" />
+      <stop offset="100%" stop-color="#361f13" />
+    </linearGradient>
+    <linearGradient id="hof-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cb8a42" />
+      <stop offset="50%" stop-color="#fae7c2" />
+      <stop offset="100%" stop-color="#ba7630" />
+    </linearGradient>
+    <linearGradient id="hof-ribbon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a4552f" />
+      <stop offset="100%" stop-color="#783b21" />
+    </linearGradient>
+  </defs>
+  <polygon points="36,68 180,34 180,154 36,178" fill="url(#hof-ribbon)" stroke="#c07f50" stroke-width="3" />
+  <polygon points="1144,68 1000,34 1000,154 1144,178" fill="url(#hof-ribbon)" stroke="#c07f50" stroke-width="3" />
+  <rect x="148" y="18" width="884" height="154" rx="24" fill="url(#hof-panel)" stroke="#c48b55" stroke-width="4" />
+  <polygon points="565,6 590,30 615,6 640,30 665,6 640,42 590,42" fill="#dbad67" stroke="#f2d29f" stroke-width="2" />
+  <text x="590" y="64" text-anchor="middle" fill="#efd8b5" font-size="20" letter-spacing="6" font-family="'Cinzel','Copperplate','Times New Roman',serif">CHAMPIONS</text>
+  <text x="590" y="118" text-anchor="middle" fill="url(#hof-gold)" font-size="66" font-weight="700" letter-spacing="3" font-family="'Cinzel','Copperplate','Times New Roman',serif">HALL OF FAME</text>
+  <text x="590" y="149" text-anchor="middle" fill="#cf9f6b" font-size="16" letter-spacing="4" font-family="'Cinzel','Copperplate','Times New Roman',serif">THE FASTEST CODEBREAKERS</text>
+</svg>

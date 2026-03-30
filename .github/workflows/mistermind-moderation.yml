@@ -1,0 +1,108 @@
+name: MisterMind Moderation
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: mistermind-moderation-${{ github.repository }}-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      github.actor != vars.MM_AUTOMATION_LOGIN &&
+      github.event_name == 'issue_comment' &&
+      github.event.action == 'created' &&
+      github.event.issue.pull_request == null &&
+      (vars.MM_PAUSED_UNTIL == '' || vars.MM_PAUSED_UNTIL == '0') &&
+      vars.MM_RATE_MODE != 'lockdown' &&
+      vars.MM_RATE_MODE != 'secondary_lockdown' &&
+      contains(github.event.issue.labels.*.name, 'game:mistermind')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Resolve hot-path auth mode
+        id: auth_mode
+        env:
+          MM_GH_AUTH_MODE: ${{ vars.MM_GH_AUTH_MODE }}
+          MM_GH_APP_ID: ${{ vars.MISTERMIND_GH_APP_ID }}
+          MM_GH_APP_PRIVATE_KEY: ${{ secrets.MISTERMIND_GH_APP_PRIVATE_KEY }}
+        run: |
+          if [ "${MM_GH_AUTH_MODE}" = "app" ] && [ -n "${MM_GH_APP_ID}" ] && [ "${MM_GH_APP_ID}" != "0" ] && [ -n "${MM_GH_APP_PRIVATE_KEY}" ]; then
+            echo "use_app=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "use_app=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub App installation token
+        if: steps.auth_mode.outputs.use_app == 'true'
+        id: app_token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.MISTERMIND_GH_APP_ID }}
+          private-key: ${{ secrets.MISTERMIND_GH_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+
+      - name: Select hot-path token
+        id: hot_auth
+        env:
+          APP_TOKEN: ${{ steps.app_token.outputs.token }}
+          APP_SLUG: ${{ steps.app_token.outputs.app-slug }}
+          PAT_TOKEN: ${{ secrets.MISTERMIND_GH_PAT }}
+          DEFAULT_AUTOMATION_LOGIN: ${{ vars.MM_AUTOMATION_LOGIN }}
+        run: |
+          if [ -n "${APP_TOKEN}" ]; then
+            echo "gh_token=${APP_TOKEN}" >> "$GITHUB_OUTPUT"
+            if [ -n "${APP_SLUG}" ]; then
+              echo "automation_login=${APP_SLUG}[bot]" >> "$GITHUB_OUTPUT"
+            elif [ -n "${DEFAULT_AUTOMATION_LOGIN}" ]; then
+              echo "automation_login=${DEFAULT_AUTOMATION_LOGIN}" >> "$GITHUB_OUTPUT"
+            else
+              echo "automation_login=github-actions[bot]" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "gh_token=${PAT_TOKEN}" >> "$GITHUB_OUTPUT"
+            if [ -n "${DEFAULT_AUTOMATION_LOGIN}" ]; then
+              echo "automation_login=${DEFAULT_AUTOMATION_LOGIN}" >> "$GITHUB_OUTPUT"
+            else
+              echo "automation_login=github-actions[bot]" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Run moderation lane
+        id: moderation_run
+        env:
+          GH_TOKEN: ${{ steps.hot_auth.outputs.gh_token }}
+          MISTERMIND_SALT: ${{ secrets.MISTERMIND_SALT }}
+          MISTERMIND_STATE_SIGNING_SECRET: ${{ secrets.MISTERMIND_STATE_SIGNING_SECRET }}
+          MM_ENGINE_MODE: moderation
+          MM_MOD_POLICY_PATH: config/moderation-policy.v1.json
+          MM_AUTOMATION_LOGIN: ${{ steps.hot_auth.outputs.automation_login }}
+          MM_PAUSED_UNTIL: ${{ vars.MM_PAUSED_UNTIL }}
+          MM_RATE_MODE: ${{ vars.MM_RATE_MODE }}
+        run: |
+          set +e
+          PYTHONPATH=src python3 -m mistermind
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
+
+      - name: Update rate limit state
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.MISTERMIND_GH_PAT }}
+          RUN_STATUS: ${{ steps.moderation_run.outputs.status }}
+        run: |
+          scripts/update_rate_controls.sh

@@ -1,0 +1,298 @@
+<svg width="1360" height="800" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="wood-h" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#3a2a18"/>
+<stop offset="100%" stop-color="#261a0c"/>
+</linearGradient>
+<linearGradient id="felt-h" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#0c1a12"/>
+<stop offset="100%" stop-color="#081008"/>
+</linearGradient>
+<linearGradient id="ft" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#5a4830"/>
+<stop offset="100%" stop-color="#2e2014"/>
+</linearGradient>
+<linearGradient id="fl" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#5a4830"/>
+<stop offset="100%" stop-color="#2e2014"/>
+</linearGradient>
+<linearGradient id="fb" x1="0" y1="1" x2="0" y2="0">
+<stop offset="0%" stop-color="#5a4830"/>
+<stop offset="100%" stop-color="#1a1208"/>
+</linearGradient>
+<linearGradient id="fr" x1="1" y1="0" x2="0" y2="0">
+<stop offset="0%" stop-color="#4a3820"/>
+<stop offset="100%" stop-color="#1a1208"/>
+</linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#1e1810"/>
+<stop offset="100%" stop-color="#0a0804"/>
+</linearGradient>
+<filter id="peg-lift" x="-25%" y="-25%" width="150%" height="160%">
+<feDropShadow dx="0" dy="1.3" stdDeviation="1.2" flood-color="#050302" flood-opacity="0.55"/>
+</filter>
+<filter id="qm-lift" x="-30%" y="-30%" width="160%" height="170%">
+<feDropShadow dx="0" dy="1.2" stdDeviation="1.1" flood-color="#000000" flood-opacity="0.38"/>
+</filter>
+<clipPath id="bc"><rect x="18" y="18" width="644" height="364" rx="3"/></clipPath>
+<pattern id="knot1" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+<circle cx="20" cy="20" r="8" fill="none" stroke="#c8a060" stroke-width="0.3" opacity="0.04"/>
+<circle cx="20" cy="20" r="4" fill="none" stroke="#c8a060" stroke-width="0.2" opacity="0.03"/>
+</pattern>
+<pattern id="feltweave" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+<rect x="0" y="0" width="2" height="2" fill="#0e1e14" opacity="0.3"/>
+<rect x="2" y="2" width="2" height="2" fill="#0e1e14" opacity="0.3"/>
+</pattern>
+</defs>
+
+<!-- Base board -->
+<rect x="0" y="0" width="680" height="400" rx="6" fill="#1a1208"/>
+
+<!-- Frame edges -->
+<rect x="0" y="0" width="680" height="18" fill="url(#ft)"/>
+<rect x="0" y="382" width="680" height="18" fill="url(#fb)"/>
+<rect x="0" y="0" width="18" height="400" fill="url(#fl)"/>
+<rect x="662" y="0" width="18" height="400" fill="url(#fr)"/>
+
+<!-- Frame inner bevels -->
+<rect x="4" y="4" width="10" height="392" fill="#4a3820" opacity="0.3"/>
+<rect x="666" y="4" width="10" height="392" fill="#2a1c10" opacity="0.3"/>
+<rect x="4" y="4" width="672" height="10" fill="#4a3820" opacity="0.2"/>
+<rect x="4" y="386" width="672" height="10" fill="#2a1c10" opacity="0.2"/>
+
+<!-- Frame grain -->
+<g opacity="0.04" stroke="#d4a060" stroke-width="0.3" fill="none">
+<path d="M0 6Q80 4,160 7Q240 5,320 8Q400 6,480 9Q560 7,680 5"/>
+<path d="M0 12Q90 10,180 13Q270 11,360 14Q450 12,540 15Q630 13,680 11"/>
+<path d="M0 391Q80 389,160 392Q240 390,320 393Q400 391,480 394Q560 392,680 390"/>
+<path d="M0 397Q90 395,180 398Q270 396,360 399Q450 397,540 400Q630 398,680 396"/>
+</g>
+
+<!-- Corner screws -->
+<circle cx="24" cy="24" r="4" fill="#7a6840" opacity="0.5"/>
+<circle cx="24" cy="24" r="2.5" fill="#3a2a18"/>
+<circle cx="24" cy="24" r="1" fill="#8a7848" opacity="0.4"/>
+<line x1="22" y1="24" x2="26" y2="24" stroke="#2a1c10" stroke-width="0.5"/>
+<circle cx="656" cy="24" r="4" fill="#7a6840" opacity="0.5"/>
+<circle cx="656" cy="24" r="2.5" fill="#3a2a18"/>
+<circle cx="656" cy="24" r="1" fill="#8a7848" opacity="0.4"/>
+<line x1="654" y1="24" x2="658" y2="24" stroke="#2a1c10" stroke-width="0.5"/>
+<circle cx="24" cy="376" r="4" fill="#7a6840" opacity="0.5"/>
+<circle cx="24" cy="376" r="2.5" fill="#3a2a18"/>
+<circle cx="24" cy="376" r="1" fill="#8a7848" opacity="0.4"/>
+<line x1="22" y1="376" x2="26" y2="376" stroke="#2a1c10" stroke-width="0.5"/>
+<circle cx="656" cy="376" r="4" fill="#7a6840" opacity="0.5"/>
+<circle cx="656" cy="376" r="2.5" fill="#3a2a18"/>
+<circle cx="656" cy="376" r="1" fill="#8a7848" opacity="0.4"/>
+<line x1="654" y1="376" x2="658" y2="376" stroke="#2a1c10" stroke-width="0.5"/>
+
+<!-- Frame border -->
+<rect x="0" y="0" width="680" height="400" rx="6" fill="none" stroke="#6a5838" stroke-width="1.5"/>
+<rect x="8" y="8" width="664" height="384" rx="3" fill="none" stroke="#3a2a18" stroke-width="0.5"/>
+
+<!-- Clipped board interior -->
+<g clip-path="url(#bc)">
+<rect x="18" y="18" width="644" height="364" fill="url(#wood-h)"/>
+
+<!-- Wood grain -->
+<g opacity="0.07" stroke="#c8a060" fill="none">
+<path d="M18 28Q120 24,220 30Q340 26,440 32Q560 28,680 34" stroke-width="0.5"/>
+<path d="M18 34Q140 31,260 36Q370 32,480 38Q580 35,680 40" stroke-width="0.3"/>
+<path d="M18 46Q130 42,240 48Q360 44,470 50Q570 46,680 52" stroke-width="0.5"/>
+<path d="M18 52Q150 49,270 54Q380 50,490 56Q590 52,680 58" stroke-width="0.3"/>
+<path d="M18 64Q110 60,210 66Q330 62,440 68Q550 64,680 70" stroke-width="0.5"/>
+<path d="M18 70Q140 67,260 72Q370 68,490 74Q590 70,680 76" stroke-width="0.3"/>
+<path d="M18 82Q130 78,240 84Q350 80,460 86Q570 82,680 88" stroke-width="0.5"/>
+<path d="M18 88Q150 85,270 90Q380 86,500 92Q600 88,680 94" stroke-width="0.3"/>
+<path d="M18 100Q120 96,220 102Q340 98,450 104Q560 100,680 106" stroke-width="0.5"/>
+<path d="M18 106Q140 103,260 108Q370 104,490 110Q590 106,680 112" stroke-width="0.3"/>
+<path d="M18 118Q130 114,240 120Q360 116,470 122Q570 118,680 124" stroke-width="0.5"/>
+<path d="M18 124Q150 121,270 126Q380 122,500 128Q600 124,680 130" stroke-width="0.3"/>
+<path d="M18 136Q110 132,210 138Q330 134,440 140Q550 136,680 142" stroke-width="0.5"/>
+<path d="M18 148Q140 145,260 150Q370 146,490 152Q590 148,680 154" stroke-width="0.4"/>
+<path d="M18 160Q130 156,240 162Q350 158,460 164Q570 160,680 166" stroke-width="0.5"/>
+<path d="M18 172Q150 169,270 174Q380 170,500 176Q600 172,680 178" stroke-width="0.3"/>
+<path d="M18 184Q120 180,220 186Q340 182,450 188Q560 184,680 190" stroke-width="0.5"/>
+<path d="M18 196Q140 193,260 198Q370 194,490 200Q590 196,680 202" stroke-width="0.4"/>
+<path d="M18 208Q130 204,240 210Q360 206,470 212Q570 208,680 214" stroke-width="0.5"/>
+<path d="M18 220Q150 217,270 222Q380 218,500 224Q600 220,680 226" stroke-width="0.3"/>
+<path d="M18 232Q110 228,210 234Q330 230,440 236Q550 232,680 238" stroke-width="0.5"/>
+<path d="M18 244Q140 241,260 246Q370 242,490 248Q590 244,680 250" stroke-width="0.4"/>
+<path d="M18 256Q130 252,240 258Q350 254,460 260Q570 256,680 262" stroke-width="0.5"/>
+<path d="M18 268Q150 265,270 270Q380 266,500 272Q600 268,680 274" stroke-width="0.3"/>
+<path d="M18 280Q120 276,220 282Q340 278,450 284Q560 280,680 286" stroke-width="0.5"/>
+<path d="M18 292Q140 289,260 294Q370 290,490 296Q590 292,680 298" stroke-width="0.4"/>
+<path d="M18 304Q130 300,240 306Q360 302,470 308Q570 304,680 310" stroke-width="0.5"/>
+<path d="M18 316Q150 313,270 318Q380 314,500 320Q600 316,680 322" stroke-width="0.3"/>
+<path d="M18 328Q110 324,210 330Q330 326,440 332Q550 328,680 334" stroke-width="0.5"/>
+<path d="M18 340Q140 337,260 342Q370 338,490 344Q590 340,680 346" stroke-width="0.3"/>
+<path d="M18 352Q130 348,240 354Q360 350,470 356Q570 352,680 358" stroke-width="0.5"/>
+<path d="M18 364Q150 361,270 366Q380 362,500 368Q600 364,680 370" stroke-width="0.3"/>
+<path d="M18 376Q110 372,210 378Q330 374,440 380Q550 376,680 382" stroke-width="0.5"/>
+</g>
+
+<!-- Knot pattern overlay -->
+<rect x="18" y="18" width="644" height="364" fill="url(#knot1)" opacity="0.6"/>
+
+<!-- Wood knots -->
+<g opacity="0.025">
+<ellipse cx="120" cy="160" rx="12" ry="18" fill="none" stroke="#c8a060" stroke-width="0.8"/>
+<ellipse cx="120" cy="160" rx="6" ry="10" fill="none" stroke="#c8a060" stroke-width="0.5"/>
+<ellipse cx="540" cy="320" rx="10" ry="14" fill="none" stroke="#c8a060" stroke-width="0.7"/>
+<ellipse cx="540" cy="320" rx="5" ry="8" fill="none" stroke="#c8a060" stroke-width="0.4"/>
+</g>
+
+<!-- Title: crossed-out MASTERMIND -->
+<g opacity="0.55">
+<text x="340" y="44" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" fill="#a08860" letter-spacing="6">MASTERMIND</text>
+<path d="M258 40Q278 33,300 42Q322 34,344 41Q366 33,388 42Q406 36,422 38" fill="none" stroke="#c8a060" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M261 42Q280 36,304 44Q324 37,346 43Q368 36,390 44Q404 38,420 41" fill="none" stroke="#c8a060" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M264 36Q286 31,308 38Q330 32,352 37Q372 31,392 38Q408 33,419 35" fill="none" stroke="#b09050" stroke-width="1" stroke-linecap="round"/>
+</g>
+
+<!-- Title: MISTERMIND -->
+<text x="345" y="70" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="500" fill="#d4b080" letter-spacing="8">MISTERMIND</text>
+<line x1="210" y1="80" x2="306" y2="80" stroke="#5a4828" stroke-width="0.4"/>
+<line x1="374" y1="80" x2="470" y2="80" stroke="#5a4828" stroke-width="0.4"/>
+<circle cx="340" cy="80" r="2" fill="#7a6840" opacity="0.5"/>
+
+<!-- Felt board area -->
+<rect x="40" y="96" width="420" height="280" rx="3" fill="url(#felt-h)"/>
+<rect x="40" y="96" width="420" height="280" fill="url(#feltweave)" opacity="0.15"/>
+<rect x="40" y="96" width="420" height="280" rx="3" fill="none" stroke="#1a3020" stroke-width="1"/>
+<rect x="41" y="97" width="418" height="278" rx="2" fill="none" stroke="#0a1a0e" stroke-width="0.5"/>
+
+<!-- Row dividers -->
+<g opacity="0.06" stroke="#2a4a38" stroke-width="0.3" fill="none">
+<line x1="40" y1="136" x2="460" y2="136"/>
+<line x1="40" y1="176" x2="460" y2="176"/>
+<line x1="40" y1="216" x2="460" y2="216"/>
+<line x1="40" y1="256" x2="460" y2="256"/>
+<line x1="40" y1="296" x2="460" y2="296"/>
+<line x1="40" y1="336" x2="460" y2="336"/>
+</g>
+
+<!-- Row 1 (faded) -->
+<g opacity="0.44">
+<circle cx="102" cy="116" r="13" fill="#2a5a8a" stroke="#1a3a5a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="96" cy="110" rx="4" ry="3" fill="#4a8aba" opacity="0.25"/>
+<circle cx="150" cy="116" r="13" fill="#4a7a1a" stroke="#2a4a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="144" cy="110" rx="4" ry="3" fill="#6aaa3a" opacity="0.25"/>
+<circle cx="198" cy="116" r="13" fill="#b83838" stroke="#8a1818" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="192" cy="110" rx="4" ry="3" fill="#e06060" opacity="0.25"/>
+<circle cx="246" cy="116" r="13" fill="#2a5a8a" stroke="#1a3a5a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="240" cy="110" rx="4" ry="3" fill="#4a8aba" opacity="0.25"/>
+<circle cx="340" cy="110" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+<circle cx="354" cy="110" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="340" cy="124" r="4.5" fill="none" stroke="#1a3828" stroke-width="0.5"/>
+<circle cx="354" cy="124" r="4.5" fill="none" stroke="#1a3828" stroke-width="0.5"/>
+</g>
+
+<!-- Row 2 -->
+<g opacity="0.58">
+<circle cx="102" cy="156" r="13" fill="#b83838" stroke="#8a1818" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="96" cy="150" rx="4" ry="3" fill="#e06060" opacity="0.3"/>
+<circle cx="150" cy="156" r="13" fill="#c88a1a" stroke="#a06a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="144" cy="150" rx="4" ry="3" fill="#e8b04a" opacity="0.3"/>
+<circle cx="198" cy="156" r="13" fill="#6a60b8" stroke="#4a4098" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="192" cy="150" rx="4" ry="3" fill="#9a90e0" opacity="0.3"/>
+<circle cx="246" cy="156" r="13" fill="#4a7a1a" stroke="#2a4a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="240" cy="150" rx="4" ry="3" fill="#6aaa3a" opacity="0.3"/>
+<circle cx="340" cy="150" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+<circle cx="354" cy="150" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+<circle cx="340" cy="164" r="4.5" fill="none" stroke="#1a3828" stroke-width="0.5"/>
+<circle cx="354" cy="164" r="4.5" fill="none" stroke="#1a3828" stroke-width="0.5"/>
+</g>
+
+<!-- Row 3 -->
+<g opacity="0.72">
+<circle cx="102" cy="196" r="13" fill="#6a60b8" stroke="#4a4098" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="96" cy="190" rx="4" ry="3" fill="#9a90e0" opacity="0.3"/>
+<circle cx="150" cy="196" r="13" fill="#c88a1a" stroke="#a06a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="144" cy="190" rx="4" ry="3" fill="#e8b04a" opacity="0.3"/>
+<circle cx="198" cy="196" r="13" fill="#b83838" stroke="#8a1818" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="192" cy="190" rx="4" ry="3" fill="#e06060" opacity="0.3"/>
+<circle cx="246" cy="196" r="13" fill="#4a7a1a" stroke="#2a4a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="240" cy="190" rx="4" ry="3" fill="#6aaa3a" opacity="0.3"/>
+<circle cx="340" cy="190" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="354" cy="190" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+<circle cx="340" cy="204" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+<circle cx="354" cy="204" r="4.5" fill="none" stroke="#1a3828" stroke-width="0.5"/>
+</g>
+
+<!-- Row 4 -->
+<g opacity="0.86">
+<circle cx="102" cy="236" r="13" fill="#4a7a1a" stroke="#2a4a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="96" cy="230" rx="4" ry="3" fill="#6aaa3a" opacity="0.35"/>
+<circle cx="150" cy="236" r="13" fill="#b83838" stroke="#8a1818" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="144" cy="230" rx="4" ry="3" fill="#e06060" opacity="0.35"/>
+<circle cx="198" cy="236" r="13" fill="#c88a1a" stroke="#a06a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="192" cy="230" rx="4" ry="3" fill="#e8b04a" opacity="0.35"/>
+<circle cx="246" cy="236" r="13" fill="#6a60b8" stroke="#4a4098" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="240" cy="230" rx="4" ry="3" fill="#9a90e0" opacity="0.35"/>
+<circle cx="340" cy="230" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="354" cy="230" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="340" cy="244" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+<circle cx="354" cy="244" r="4.5" fill="none" stroke="#1a3828" stroke-width="0.5"/>
+</g>
+
+<!-- Row 5 -->
+<g opacity="0.96">
+<circle cx="102" cy="276" r="13" fill="#6a60b8" stroke="#4a4098" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="96" cy="270" rx="4" ry="3" fill="#9a90e0" opacity="0.4"/>
+<circle cx="150" cy="276" r="13" fill="#c05028" stroke="#983818" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="144" cy="270" rx="4" ry="3" fill="#e87850" opacity="0.4"/>
+<circle cx="198" cy="276" r="13" fill="#b83838" stroke="#8a1818" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="192" cy="270" rx="4" ry="3" fill="#e06060" opacity="0.4"/>
+<circle cx="246" cy="276" r="13" fill="#c88a1a" stroke="#a06a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="240" cy="270" rx="4" ry="3" fill="#e8b04a" opacity="0.4"/>
+<circle cx="340" cy="270" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="354" cy="270" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="340" cy="284" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+<circle cx="354" cy="284" r="4.5" fill="none" stroke="#1a3828" stroke-width="0.5"/>
+</g>
+
+<!-- Row 6 (current) -->
+<circle cx="102" cy="316" r="13" fill="#c88a1a" stroke="#a06a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="96" cy="310" rx="4" ry="3" fill="#e8b04a" opacity="0.4"/>
+<circle cx="150" cy="316" r="13" fill="#4a7a1a" stroke="#2a4a0a" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="144" cy="310" rx="4" ry="3" fill="#6aaa3a" opacity="0.4"/>
+<circle cx="198" cy="316" r="13" fill="#6a60b8" stroke="#4a4098" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="192" cy="310" rx="4" ry="3" fill="#9a90e0" opacity="0.4"/>
+<circle cx="246" cy="316" r="13" fill="#b83838" stroke="#8a1818" stroke-width="0.5" filter="url(#peg-lift)"/>
+<ellipse cx="240" cy="310" rx="4" ry="3" fill="#e06060" opacity="0.4"/>
+<circle cx="340" cy="310" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="354" cy="310" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="340" cy="324" r="4.5" fill="#0e0a06" stroke="#4a3a24" stroke-width="0.5"/>
+<circle cx="354" cy="324" r="4.5" fill="#c8b89a" stroke="#a89878" stroke-width="0.3"/>
+
+<!-- Row 7 (empty/next) -->
+<g opacity="0.2">
+<circle cx="102" cy="356" r="13" fill="none" stroke="#3a5a48" stroke-width="0.8" stroke-dasharray="3 3"/>
+<circle cx="150" cy="356" r="13" fill="none" stroke="#3a5a48" stroke-width="0.8" stroke-dasharray="3 3"/>
+<circle cx="198" cy="356" r="13" fill="none" stroke="#3a5a48" stroke-width="0.8" stroke-dasharray="3 3"/>
+<circle cx="246" cy="356" r="13" fill="none" stroke="#3a5a48" stroke-width="0.8" stroke-dasharray="3 3"/>
+</g>
+</g>
+
+<!-- Secret code shield -->
+<rect x="482" y="96" width="178" height="280" rx="5" fill="url(#sh)"/>
+<rect x="482" y="96" width="178" height="280" rx="5" fill="none" stroke="#4a3820" stroke-width="1.2"/>
+<rect x="486" y="100" width="170" height="272" rx="3" fill="none" stroke="#2a1e10" stroke-width="0.5"/>
+<line x1="492" y1="126" x2="650" y2="126" stroke="#2a1e10" stroke-width="0.5"/>
+<text x="571" y="118" text-anchor="middle" font-family="'Helvetica Neue', Arial, serif" font-size="11" fill="#7a6840" letter-spacing="3" font-weight="500">SECRET CODE</text>
+
+<!-- Question marks -->
+<text x="526" y="224" text-anchor="middle" font-family="Georgia, serif" font-size="38" fill="#56452a" opacity="0.9" font-weight="500" filter="url(#qm-lift)">?</text>
+<text x="550" y="249" text-anchor="middle" font-family="Georgia, serif" font-size="38" fill="#56452a" opacity="0.9" font-weight="500" filter="url(#qm-lift)">?</text>
+<text x="574" y="224" text-anchor="middle" font-family="Georgia, serif" font-size="38" fill="#56452a" opacity="0.9" font-weight="500" filter="url(#qm-lift)">?</text>
+<text x="598" y="249" text-anchor="middle" font-family="Georgia, serif" font-size="38" fill="#56452a" opacity="0.9" font-weight="500" filter="url(#qm-lift)">?</text>
+
+<!-- Peeking secret pegs -->
+<g opacity="0.2">
+<circle cx="530" cy="336" r="10" fill="#b83838" filter="url(#peg-lift)"/>
+<circle cx="554" cy="336" r="10" fill="#6a60b8" filter="url(#peg-lift)"/>
+<circle cx="578" cy="336" r="10" fill="#c88a1a" filter="url(#peg-lift)"/>
+<circle cx="602" cy="336" r="10" fill="#4a7a1a" filter="url(#peg-lift)"/>
+</g>
+</svg>

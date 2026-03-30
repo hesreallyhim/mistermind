@@ -1,0 +1,54 @@
+name: MisterMind Leaderboards
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build leaderboard summaries from game-boards
+        run: |
+          git fetch origin game-boards
+          TMP_DIR="${RUNNER_TEMP}/game-boards-worktree"
+          git worktree remove --force "$TMP_DIR" >/dev/null 2>&1 || true
+          git worktree add --detach "$TMP_DIR" origin/game-boards
+
+          PYTHONPATH=src python3 scripts/build_leaderboards.py \
+            --games-root "$TMP_DIR/data/games" \
+            --readme README.md \
+            --json-out data/leaderboards.json \
+            --cards-dir assets
+
+          git worktree remove --force "$TMP_DIR"
+
+      - name: Commit and push leaderboard updates
+        run: |
+          if [ -z "$(git status --porcelain -- README.md data/leaderboards.json assets/readme-leaderboard-card-*.svg)" ]; then
+            echo "No leaderboard changes to publish."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md data/leaderboards.json assets/readme-leaderboard-card-*.svg
+          git commit -m "leaderboard: publish scheduled update"
+
+          if git push origin HEAD:main; then
+            exit 0
+          fi
+
+          echo "Push raced; rebasing once and retrying."
+          git pull --rebase origin main
+          git push origin HEAD:main

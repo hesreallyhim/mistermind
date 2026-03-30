@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ci-checks
+        name: ci-checks
+        entry: make ci-checks
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "owner_malformed": {
+    "warning_streak": 1,
+    "cooldown_streak": 2,
+    "violation_streak": 3,
+    "cooldown_minutes": 10,
+    "disqualify_on_violation": false
+  },
+  "owner_spam": {
+    "warning_count": 1,
+    "cooldown_count": 2,
+    "violation_count": 3,
+    "cooldown_minutes": 10,
+    "disqualify_on_violation": false
+  },
+  "non_owner": {
+    "warning_attempt": 1,
+    "mute_attempt": 2,
+    "escalation_attempt": 3,
+    "mute_minutes": 60
+  },
+  "retention": {
+    "max_actor_records": 50,
+    "max_recent_events": 200
+  }
+}

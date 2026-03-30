@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 210" width="1180" height="210" role="img" aria-labelledby="heading-mistermind-lobby">
+  <title id="heading-mistermind-lobby">MISTERMIND LOBBY</title>
+  <defs>
+    <linearGradient id="lobby-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f2d1c" />
+      <stop offset="100%" stop-color="#2f1b12" />
+    </linearGradient>
+    <linearGradient id="lobby-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c6843f" />
+      <stop offset="50%" stop-color="#f7e3ba" />
+      <stop offset="100%" stop-color="#b86f2d" />
+    </linearGradient>
+    <linearGradient id="lobby-ribbon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8a4728" />
+      <stop offset="100%" stop-color="#66341d" />
+    </linearGradient>
+  </defs>
+  <rect x="112" y="26" width="956" height="156" rx="26" fill="url(#lobby-panel)" stroke="#9f6e45" stroke-width="4" />
+  <polygon points="32,74 132,52 132,152 32,174" fill="url(#lobby-ribbon)" stroke="#ab6e42" stroke-width="3" />
+  <polygon points="1148,74 1048,52 1048,152 1148,174" fill="url(#lobby-ribbon)" stroke="#ab6e42" stroke-width="3" />
+  <polygon points="540,10 565,34 590,10 615,34 640,10 615,46 565,46" fill="#d49f59" stroke="#e5c28b" stroke-width="2" />
+  <text x="590" y="74" text-anchor="middle" fill="#f0d9b8" font-size="20" letter-spacing="6" font-family="'Cinzel','Copperplate','Times New Roman',serif">THE GRAND CHAMBER</text>
+  <text x="590" y="127" text-anchor="middle" fill="url(#lobby-gold)" font-size="70" font-weight="700" letter-spacing="3" font-family="'Cinzel','Copperplate','Times New Roman',serif">MISTERMIND LOBBY</text>
+  <text x="590" y="160" text-anchor="middle" fill="#cca173" font-size="17" letter-spacing="4" font-family="'Cinzel','Copperplate','Times New Roman',serif">THE GAME IS ON</text>
+</svg>

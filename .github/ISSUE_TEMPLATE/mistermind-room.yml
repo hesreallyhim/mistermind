@@ -1,0 +1,50 @@
+name: "MisterMind Room"
+description: "Start a solo MisterMind room in this issue thread"
+title: "It's time to play MISTERMIND"
+labels: ["game:mistermind"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome to MisterMind
+
+        This issue is now your personal **MisterMind** room. You will have 10 chances to crack the hidden 4-color code of MisterMind before the game is over. With each guess, the MisterMind bot will provide feedback to help you narrow down the possibilities. The game will time out after 30 minutes.
+
+        **Core rules**
+        - 6 colors
+        - 4 color sequence of "pegs" (duplicate colors allowed)
+        - 10 attempts
+        - feedback after each guess:
+          - Color and position
+          - Color only
+          - Neither color nor position
+
+        Read the [full rules here](https://github.com/hesreallyhim/mistermind/blob/main/docs/RULES.md)
+
+  - type: dropdown
+    id: gameplay_mode
+    attributes:
+      label: Gameplay Mode
+      description: |
+        Choose classic play, deduction-assisted hints, or strict Knuth-optimal play. 
+        (See [the rule book](https://github.com/hesreallyhim/mistermind/blob/main/docs/RULES.md) for details on each mode - start with Classic.)
+      options:
+        - Classic
+        - Hint Mode
+        - Perfectionist
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: board_theme
+    attributes:
+      label: Board Theme
+      description: "Visual preference for your game board (stylistic only)."
+      options:
+        - Classic Wood
+        - Terminal
+        - Ocean
+      default: 0
+    validations:
+      required: false

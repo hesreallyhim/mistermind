@@ -1,0 +1,42 @@
+name: MisterMind Room Sweep
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Close aged terminal rooms
+        id: sweep_run
+        env:
+          GH_TOKEN: ${{ secrets.MISTERMIND_GH_PAT }}
+          MM_ENGINE_MODE: sweep
+          MM_PAUSED_UNTIL: ${{ vars.MM_PAUSED_UNTIL }}
+          MM_RATE_MODE: ${{ vars.MM_RATE_MODE }}
+        run: |
+          set +e
+          PYTHONPATH=src python3 -m mistermind
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
+
+      - name: Update rate limit state
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.MISTERMIND_GH_PAT }}
+          RUN_STATUS: ${{ steps.sweep_run.outputs.status }}
+        run: |
+          scripts/update_rate_controls.sh

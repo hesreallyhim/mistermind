@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 104" width="980" height="104" role="img" aria-labelledby="heading-house-rules">
+  <title id="heading-house-rules">House Rules</title>
+  <defs>
+    <linearGradient id="house-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a2a1a" />
+      <stop offset="100%" stop-color="#311c12" />
+    </linearGradient>
+    <linearGradient id="house-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c7843d" />
+      <stop offset="50%" stop-color="#f4dfb8" />
+      <stop offset="100%" stop-color="#b97531" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="8" width="972" height="88" rx="16" fill="url(#house-panel)" stroke="#946542" stroke-width="3" />
+  <text x="490" y="66" text-anchor="middle" fill="url(#house-gold)" font-size="48" font-weight="700" letter-spacing="3" font-family="'Cinzel','Copperplate','Times New Roman',serif">HOUSE RULES</text>
+</svg>
