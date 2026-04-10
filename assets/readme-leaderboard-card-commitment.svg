@@ -20,8 +20,8 @@
   <text x="380" y="96" text-anchor="middle" fill="#d9b68b" font-size="21" letter-spacing="0.8">Most Games Played (Any Mode)</text>
   <rect x="24" y="128" width="712" height="44" rx="9" fill="#2a1a10" stroke="#5b3d26" stroke-width="1"/>
   <text x="42" y="158" fill="#e5cda9" font-size="24" font-weight="700">1</text>
-  <text x="88" y="158" fill="#f0dcc0" font-size="22">@hesreallyhim</text>
-  <text x="716" y="158" text-anchor="end" fill="#f0dcc0" font-size="22" font-weight="700">1 games</text>
+  <text x="88" y="158" fill="#f0dcc0" font-size="22">No data yet</text>
+  <text x="716" y="158" text-anchor="end" fill="#f0dcc0" font-size="22" font-weight="700">--</text>
   <rect x="24" y="176" width="712" height="44" rx="9" fill="#24170f" stroke="#5b3d26" stroke-width="1"/>
   <text x="42" y="206" fill="#e5cda9" font-size="24" font-weight="700">2</text>
   <text x="88" y="206" fill="#f0dcc0" font-size="22">—</text>

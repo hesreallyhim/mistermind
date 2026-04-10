@@ -67,7 +67,7 @@ Additional command:
 
 <!-- MM_LEADERBOARD_START -->
 ### Leaderboards
-_As of (UTC): 2026-04-10T16:51:00Z from 1 completed games_
+_As of (UTC): 2026-04-10T17:44:45+00:00 from 0 completed games_
 (Leaderboards are updated roughly every 15 minutes)
 
 <table align="center">
@@ -80,4 +80,6 @@ _As of (UTC): 2026-04-10T16:51:00Z from 1 completed games_
     <td><picture><img src="assets/readme-leaderboard-card-perfectionists.svg" alt="Perfectionists Card" width="460" /></picture></td>
   </tr>
 </table>
+
+<em>No completed games yet.</em>
 <!-- MM_LEADERBOARD_END -->

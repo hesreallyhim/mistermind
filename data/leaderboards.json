@@ -1,35 +1,9 @@
 {
-  "generated_at": "2026-04-10T16:51:00Z",
-  "source_games": 1,
-  "most_games_completed": [
-    {
-      "player": "hesreallyhim",
-      "games": 1
-    }
-  ],
-  "most_classic_wins": [
-    {
-      "player": "hesreallyhim",
-      "wins": 1
-    }
-  ],
-  "classic_wins_by_moves": [
-    {
-      "attempts": 5,
-      "winners": [
-        {
-          "player": "hesreallyhim",
-          "wins": 1
-        }
-      ]
-    }
-  ],
-  "quick_draw_classic": [
-    {
-      "player": "hesreallyhim",
-      "attempts": 5,
-      "wins": 1
-    }
-  ],
+  "generated_at": "2026-04-10T17:44:45+00:00",
+  "source_games": 0,
+  "most_games_completed": [],
+  "most_classic_wins": [],
+  "classic_wins_by_moves": [],
+  "quick_draw_classic": [],
   "perfectionist_winners": []
 }
