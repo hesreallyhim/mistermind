@@ -1,0 +1,9 @@
+{
+  "schema": "mistermind-game-result-v1",
+  "issue": 1,
+  "player": "waldev-ders",
+  "variant": "classic",
+  "result": "lost",
+  "attempts": 2,
+  "completed_at": "2026-04-19T04:51:46Z"
+}
